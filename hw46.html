@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		
+		// задача 1
+		let drinks = ['молоко', 'пиво', 'пиво', 'молоко', 'молоко'];
+		for (let i=0; i < drinks.length; i++) {
+			let drink = drinks[i] === 'молоко' ? 'хорошо' : 'плохо';
+			console.log(drink);
+		}
+
+
+		//  задача 2
+		let numbers_sets = []
+		numbers_sets[1] = [1, 5, 12, 4, 3];
+		numbers_sets[2] = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+		numbers_sets[3] = [3, 10, 17];
+
+		for (numbers in numbers_sets) {
+			let total = 0;
+			numbers = numbers_sets[numbers]
+			for (number in numbers) {
+				total += numbers[number];
+			}
+			let avg = total / numbers.length;
+			console.log(avg);
+		}
+
+
+		// задача 3
+		let answer = prompt("У квадратного стола отпилили один угол. Сколько теперь углов у него стало?");
+		if (answer == '5' || answer == 'пять') {
+			alert('Правильный ответ!');
+		}
+		else {
+			alert('Неправильный ответ!');
+		}
+
+
+		// задача 4
+		let Duck = {
+			name: 'Дональд',
+			color: 'белый',
+			old: 1,
+			toStr : function() { console.log("%s, %s, %d", Duck.name, Duck.color, Duck.old) },
+			say : function() { console.log('Кря-кря') }
+		};
+			
+		Duck.toStr();
+		Duck.say();
+	
+
+	</script>
+</body>
+</html>
